@@ -4,8 +4,13 @@ set -e
 # options
 export GCC_LANGUAGES="c,c++,fortran,objc,obj-c++,ada" #java
 export BUILD_CORES=2 #used as argument for "make -jn"
-export SHARED='--enable-static --enable-shared'
 export STATIC='--enable-static --disable-shared'
+if [[ $TARGET == x86_64-linux-gnu ]]
+then
+    export SHARED=$STATIC
+else
+    export SHARED='--enable-static --enable-shared'
+fi
 export GNU_MULTILIB='--disable-multilib' #'--enable-multilib --enable-targets=i686-w64-mingw32,x86_64-w64-mingw32'
 export GNU_EXTRA_OPTIONS='--disable-nls --disable-werror --enable-lto' #--enable-libgcj
 

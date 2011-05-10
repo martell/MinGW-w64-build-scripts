@@ -25,8 +25,8 @@ else
         fi
     fi
     echo "--> Installing"
-    cp -r ./$TARGET/* $PREFIX/$TARGET
-    cp -r ./bin/* $PREFIX/bin
+    cp -r ./$TARGET/* $PREFIX/$TARGET/
+    cp -r ./bin/* $PREFIX/bin/
 fi
 touch pthreads.marker
     

@@ -34,7 +34,7 @@ export PREFIX=$BUILD_DIR/$SHORT_NAME
 
 DIRS_TO_MAKE="$BUILD_DIR $LOG_DIR $PREFIX 
               $GCC_LIBS $GCC_LIBS/include $GCC_LIBS/lib
-              $PREFIX/mingw/include $PREFIX/$TARGET/include
+              $PREFIX/mingw/include $PREFIX/bin $PREFIX/$TARGET/include
               $MARKER_DIR $LICENSE_DIR"
 mkdir -p $DIRS_TO_MAKE
 

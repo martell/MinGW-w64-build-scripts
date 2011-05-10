@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-if [ -f $MARKER_DIR/cleanup.marker ]
+if [ -f cleanup.marker ]
 then
     echo "--> Already cleaned up"
 else
@@ -21,4 +21,4 @@ else
         echo "--> No DLL's to copy for cross-compiler"
     fi
 fi
-touch $MARKER_DIR/cleanup.marker
+touch cleanup.marker

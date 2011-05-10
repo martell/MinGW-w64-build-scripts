@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-if [ -f $MARKER_DIR/mpfr_configure.marker ]
+if [ -f configure.marker ]
 then
     echo "--> Already configured"
 else
@@ -12,21 +12,21 @@ else
                                              > $LOG_DIR/mpfr_configure.log 2>&1 || exit 1
     echo "--> Configured"
 fi
-touch $MARKER_DIR/mpfr_configure.marker
+touch configure.marker
 
-if [ -f $MARKER_DIR/mpfr_build.marker ]
+if [ -f build.marker ]
 then
     echo "--> Already built"
 else
     echo "--> Building"
 	make $MAKE_OPTS > $LOG_DIR/mpfr_build.log 2>&1 || exit 1
 fi
-touch $MARKER_DIR/mpfr_build.marker
-if [ -f $MARKER_DIR/mpfr_install.marker ]
+touch build.marker
+if [ -f install.marker ]
 then
     echo "--> Already installed"
 else
 	echo "--> Installing"
 	make $MAKE_OPTS install > $LOG_DIR/mpfr_install.log 2>&1 || exit 1
 fi
-touch $MARKER_DIR/mpfr_install.marker
+touch install.marker

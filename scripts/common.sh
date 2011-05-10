@@ -15,6 +15,7 @@ export SRC_DIR=$TOP_DIR/src
 export BUILD_DIR=$TOP_DIR/$SHORT_NAME
 export LOG_DIR=$BUILD_DIR/logs
 export GCC_LIBS=$BUILD_DIR/libs
+export LICENSE_DIR=$BUILD_DIR/license
 if [[ $HOST == $TARGET ]]
 then
     GRAPHITE_LIBS="--with-ppl=$GCC_LIBS --with-cloog=$GCC_LIBS"
@@ -24,8 +25,10 @@ fi
 export SCRIPTS=$TOP_DIR/scripts
 export MARKER_DIR=$BUILD_DIR/markers
 export PREFIX=$BUILD_DIR/$SHORT_NAME
-DIRS_TO_MAKE="$BUILD_DIR $LOG_DIR $PREFIX $GCC_LIBS $GCC_LIBS/include $GCC_LIBS/lib $MARKER_DIR
-              $PREFIX/mingw/include $PREFIX/$TARGET/include"
+DIRS_TO_MAKE="$BUILD_DIR $LOG_DIR $PREFIX 
+              $GCC_LIBS $GCC_LIBS/include $GCC_LIBS/lib
+              $PREFIX/mingw/include $PREFIX/$TARGET/include
+              $MARKER_DIR $LICENSE_DIR"
 mkdir -p $DIRS_TO_MAKE
 
 # optimized for my system.

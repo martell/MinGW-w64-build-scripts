@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-if [ -f $MARKER_DIR/pthreads.marker ]
+if [ -f pthreads.marker ]
 then
     echo "--> Already installed"
 else
@@ -25,7 +25,8 @@ else
         fi
     fi
     echo "--> Installing"
-    cp -r ./* $PREFIX
+    cp -r ./$TARGET/* $PREFIX/$TARGET
+    cp -r ./bin/* $PREFIX/bin
 fi
-touch $MARKER_DIR/pthreads.marker
+touch pthreads.marker
     

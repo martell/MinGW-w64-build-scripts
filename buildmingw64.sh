@@ -18,9 +18,11 @@ PROJECTS="expat libiconv
           gcc-c
           mingw-w64-crt
           gcc
+          python
           gdb
           make
           cleanup
+          licenses
           zipping"
 
 # native compiler options

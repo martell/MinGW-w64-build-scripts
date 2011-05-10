@@ -10,8 +10,7 @@ export SHORT_NAME=linux64
 export CRT_MULTILIB='--disable-lib64 --enable-lib32'
 
 # Projects to be built, in the right order
-export PROJECTS="ppl cloog
-                 binutils
+export PROJECTS="binutils
                  gcc
                  cleanup"
 

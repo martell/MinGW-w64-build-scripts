@@ -21,6 +21,6 @@ then
 else
 	echo "--> Zipping sources"
 	cd $TOP_DIR
-	tar --lzma -cf $SRC_FILE --exclude='*.git' --exclude='*.svn' src scripts *.sh
+	tar --lzma -cf $SRC_FILE --exclude='*.git' --exclude='*.svn' patches src scripts *.sh
 fi
 

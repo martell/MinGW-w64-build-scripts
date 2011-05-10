@@ -13,7 +13,6 @@ export CRT_MULTILIB='--disable-lib64 --enable-lib32'
 export PROJECTS="mingw-w64-headers
                  pthreads
                  binutils
-                 ppl cloog
                  gcc-c
                  mingw-w64-crt
                  gcc

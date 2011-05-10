@@ -11,7 +11,7 @@ else
                               $GNU_EXTRA_OPTIONS --with-python \
                               $GNU_MULTILIB \
                               $GNU_WIN32_OPTIONS \
-                              CFLAGS="$BUILD_CFLAGS_LTO -I$BUILD_DIR/python/include/python27" LDFLAGS="$BUILD_LDFLAGS_LTO -L$BUILD_DIR/python/lib" \
+                              CFLAGS="$BUILD_CFLAGS_LTO $GDB_PYTHON_WIN64_WORKAROUND -I$BUILD_DIR/python/include/python27" LDFLAGS="$BUILD_LDFLAGS_LTO -L$BUILD_DIR/python/lib" \
                               > $LOG_DIR/gdb_configure.log 2>&1 || exit 1
     echo "--> Configured"
 fi

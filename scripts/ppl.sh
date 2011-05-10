@@ -14,7 +14,7 @@ else
 fi
 touch configure.marker
 
-if [ -f $MARKER_DIR/ppl_build.marker ]
+if [ -f build.marker ]
 then
     echo "--> Already built"
 else

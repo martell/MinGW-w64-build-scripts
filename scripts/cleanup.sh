@@ -13,10 +13,12 @@ else
     echo "--> Stripping Executables"
     find . -name \*.exe -exec strip {} \;
 
+
     if [[ "$TARGET" == "$HOST" ]]
     then 
-        echo "--> Copying DLL's"
+        echo "--> Copying and stripping DLL's"
         cp $GCC_LIBS/bin/*.dll $PREFIX/bin
+        $HOST-strip $PREFIX/bin/*.dll
     else
         echo "--> No DLL's to copy for cross-compiler"
     fi

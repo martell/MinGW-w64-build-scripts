@@ -2,13 +2,15 @@
 set -e
 
 # options
-export GCC_LANGUAGES="c,c++,fortran,objc,obj-c++,ada" #java
+export GCC_LANGUAGES="c,c++,fortran,objc,obj-c++" #java,ada
 export BUILD_CORES=2 #used as argument for "make -jn"
 export STATIC='--enable-static --disable-shared'
-if [[ $TARGET == x86_64-linux-gnu ]]
+if [[ $HOST == x86_64-linux-gnu ]]
 then
+    export GCC_LANGUAGES="c,c++" #java,ada
     export SHARED=$STATIC
 else
+    export GCC_LANGUAGES="c,c++,fortran,objc,obj-c++" #java,ada
     export SHARED='--enable-static --enable-shared'
 fi
 export GNU_MULTILIB='--disable-multilib' #'--enable-multilib --enable-targets=i686-w64-mingw32,x86_64-w64-mingw32'
@@ -19,17 +21,16 @@ export TOP_DIR=`pwd`
 export SRC_DIR=$TOP_DIR/src
 export BUILD_DIR=$TOP_DIR/$SHORT_NAME
 export LOG_DIR=$BUILD_DIR/logs
-export GCC_LIBS=$BUILD_DIR/libs
-export LICENSE_DIR=$BUILD_DIR/license
-if [[ $HOST == $TARGET ]]
+if [[ $HOST == x86_64-linux-gnu ]]
 then
-    GRAPHITE_LIBS="--with-ppl=$GCC_LIBS --with-cloog=$GCC_LIBS"
+    export GCC_LIBS=$TOP_DIR/linux64/libs
 else
-    GRAPHITE_LIBS=
+    export GCC_LIBS=$BUILD_DIR/libs
 fi
+export LICENSE_DIR=$BUILD_DIR/license
 export SCRIPTS=$TOP_DIR/scripts
-export MARKER_DIR=$BUILD_DIR/markers
 export PREFIX=$BUILD_DIR/$SHORT_NAME
+
 DIRS_TO_MAKE="$BUILD_DIR $LOG_DIR $PREFIX 
               $GCC_LIBS $GCC_LIBS/include $GCC_LIBS/lib
               $PREFIX/mingw/include $PREFIX/$TARGET/include

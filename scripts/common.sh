@@ -5,7 +5,7 @@ set -e
 export GCC_LANGUAGES="c,c++,fortran,objc,obj-c++" #java,ada
 export BUILD_CORES=2 #used as argument for "make -jn"
 export STATIC='--enable-static --disable-shared'
-if [[ $HOST == x86_64-linux-gnu ]]
+if [[ $HOST == "x86_64-linux-gnu" ]]
 then
     export GCC_LANGUAGES="c,c++" #java,ada
     export SHARED=$STATIC
@@ -21,11 +21,12 @@ export TOP_DIR=`pwd`
 export SRC_DIR=$TOP_DIR/src
 export BUILD_DIR=$TOP_DIR/$SHORT_NAME
 export LOG_DIR=$BUILD_DIR/logs
-if [[ $HOST == x86_64-linux-gnu ]]
+export GCC_LIBS=$BUILD_DIR/libs
+if [[ $HOST == $TARGET ]]
 then
-    export GCC_LIBS=$TOP_DIR/linux64/libs
+    export GRAPHITE_LIBS=
 else
-    export GCC_LIBS=$BUILD_DIR/libs
+    export GRAPHITE_LIBS=$GCC_LIBS
 fi
 export LICENSE_DIR=$BUILD_DIR/license
 export SCRIPTS=$TOP_DIR/scripts

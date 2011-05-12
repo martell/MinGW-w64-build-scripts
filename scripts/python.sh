@@ -7,5 +7,9 @@ then
 else
     echo "--> Unzipping"
     unzip -o $SRC_DIR/python-$TARGET.zip -d . > $LOG_DIR/python.log 2>&1 || exit 1
+    
+    echo "--> Copying files"
+    cp bin/python27.dll $PREFIX/bin/python27.dll
+    cp -r lib/python27 $PREFIX/lib/python27
 fi
 touch install.marker

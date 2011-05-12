@@ -10,17 +10,18 @@ else
     rm -rf mingw || exit 1
     find . -name \*.la -exec rm -f {} \;
 
-    echo "--> Stripping Executables"
+    echo "---> Stripping Executables"
     find . -name \*.exe -exec strip {} \;
 
 
     if [[ "$TARGET" == "$HOST" ]]
     then 
-        echo "--> Copying and stripping DLL's"
+        echo "---> Copying and stripping DLL's"
         cp $GCC_LIBS/bin/*.dll $PREFIX/bin
         $HOST-strip $PREFIX/bin/*.dll
     else
-        echo "--> No DLL's to copy for cross-compiler"
+        echo "---> No DLL's to copy for cross-compiler"
     fi
+    cd $BUILD_DIR/cleanup
 fi
 touch cleanup.marker

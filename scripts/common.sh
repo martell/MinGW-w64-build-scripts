@@ -7,10 +7,8 @@ export BUILD_CORES=2 #used as argument for "make -jn"
 export STATIC='--enable-static --disable-shared'
 if [[ $HOST == "x86_64-linux-gnu" ]]
 then
-    export GCC_LANGUAGES="c,c++" #java,ada
     export SHARED=$STATIC
 else
-    export GCC_LANGUAGES="c,c++,fortran,objc,obj-c++" #java,ada
     export SHARED='--enable-static --enable-shared'
 fi
 export GNU_MULTILIB='--disable-multilib' #'--enable-multilib --enable-targets=i686-w64-mingw32,x86_64-w64-mingw32'
@@ -28,7 +26,6 @@ then
 else
     export GRAPHITE_LIBS=$GCC_LIBS
 fi
-export LICENSE_DIR=$BUILD_DIR/license
 export SCRIPTS=$TOP_DIR/scripts
 export PREFIX=$BUILD_DIR/$SHORT_NAME
 

@@ -36,6 +36,6 @@ then
     echo "--> Already installed"
 else
     echo "--> Installing"
-    make $MAKE_OPTS install-strip > $LOG_DIR/gcc_install.log 2>&1 || exit 1
+    make $MAKE_OPTS install > $LOG_DIR/gcc_install.log 2>&1 || exit 1
 fi
 touch install.marker

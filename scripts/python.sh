@@ -10,6 +10,6 @@ else
     
     echo "--> Copying files"
     cp bin/python27.dll $PREFIX/bin/python27.dll
-    cp -r lib/python27 $PREFIX/bin/Lib/
+    cp -r lib/python27/* $PREFIX/share/gdb/python/
 fi
 touch install.marker

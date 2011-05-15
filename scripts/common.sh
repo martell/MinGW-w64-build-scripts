@@ -20,11 +20,11 @@ export SRC_DIR=$TOP_DIR/src
 export BUILD_DIR=$TOP_DIR/$SHORT_NAME
 export LOG_DIR=$BUILD_DIR/logs
 export GCC_LIBS=$BUILD_DIR/libs
-if [[ $HOST == $TARGET ]]
+if [[ "$HOST" == "$TARGET" ]]
 then
-    export GRAPHITE_LIBS=
+    export GRAPHITE_LIBS="--with-ppl=$GCC_LIBS --with-cloog=$GCC_LIBS --enable-cloog-backend=isl"
 else
-    export GRAPHITE_LIBS=$GCC_LIBS
+    export GRAPHITE_LIBS=
 fi
 export SCRIPTS=$TOP_DIR/scripts
 export PREFIX=$BUILD_DIR/$SHORT_NAME

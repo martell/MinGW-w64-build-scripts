@@ -19,6 +19,8 @@ else
         echo "---> Copying and stripping DLL's"
         cp $GCC_LIBS/bin/*.dll $PREFIX/bin
         $HOST-strip $PREFIX/bin/*.dll
+        # recopy python dll, stripping it renders it useless
+        cp $BUILD_DIR/python/bin/python27.dll $PREFIX/bin/python27.dll
     else
         echo "---> No DLL's to copy for cross-compiler"
     fi

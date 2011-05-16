@@ -10,7 +10,7 @@ else
                                                       $CRT_MULTILIB \
                                                       --enable-sdk=all --enable-secure-api \
                                                       CFLAGS="$BUILD_CFLAGS_LTO" LFLAGS="$BUILD_LFLAGS_LTO" \
-                                                      > $LOG_DIR/mingw-w64_configure.log 2>&1 || exit 1
+                                                      > $LOG_DIR/mingw-w64-headers_configure.log 2>&1 || exit 1
     echo "--> Configured"
 fi
 touch configure.marker

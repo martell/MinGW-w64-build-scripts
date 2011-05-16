@@ -20,12 +20,12 @@ export SRC_DIR=$TOP_DIR/src
 export BUILD_DIR=$TOP_DIR/$SHORT_NAME
 export LOG_DIR=$BUILD_DIR/logs
 export GCC_LIBS=$BUILD_DIR/libs
-if [[ "$HOST" == "$TARGET" ]]
-then
+#if [[ "$HOST" == "$TARGET" ]]
+#then
     export GRAPHITE_LIBS="--with-ppl=$GCC_LIBS --with-cloog=$GCC_LIBS --enable-cloog-backend=isl"
-else
-    export GRAPHITE_LIBS=
-fi
+#else
+#    export GRAPHITE_LIBS=
+#fi
 export SCRIPTS=$TOP_DIR/scripts
 export PREFIX=$BUILD_DIR/$SHORT_NAME
 
@@ -36,10 +36,10 @@ DIRS_TO_MAKE="$BUILD_DIR $LOG_DIR $PREFIX
 mkdir -p $DIRS_TO_MAKE
 
 # optimized for my system.
-export BUILD_CFLAGS='-O2 -mtune=core2 -fomit-frame-pointer -momit-leaf-frame-pointer'
+export BUILD_CFLAGS='-O2 -mtune=core2 -fomit-frame-pointer -momit-leaf-frame-pointer -fgraphite-identity -floop-interchange -floop-block -floop-parallelize-all'
 export BUILD_LFLAGS=
-export BUILD_CFLAGS_LTO=$BUILD_CFLAGS #' -flto'
-export BUILD_LFLAGS_LTO=$BUILD_LFLAGS #' -flto='$BUILD_CORES
+export BUILD_CFLAGS_LTO=$BUILD_CFLAGS' -flto'
+export BUILD_LFLAGS_LTO=$BUILD_LFLAGS' -flto='$BUILD_CORES
 export MAKE_OPTS="-j"$BUILD_CORES
 
 # get version info

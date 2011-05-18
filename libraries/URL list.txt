@@ -1,0 +1,51 @@
+ # List of URL's for general download locations
+
+## CORE
+# compression
+zlib:  http://zlib.net/
+bzip2: http://www.bzip.org/downloads.html
+gzip:  http://ftp.gnu.org/gnu/gzip/
+xz:    http://tukaani.org/xz/
+
+# console
+ncurses: http://ftp.gnu.org/gnu/ncurses/
+termcap: http://ftp.gnu.org/gnu/termcap/
+
+# fonts
+freetype: http://sourceforge.net/projects/freetype/files/freetype2/
+
+# internationalization
+libiconv: http://ftp.gnu.org/gnu/libiconv/
+
+## MULTIMEDIA
+# audio
+flac:       http://downloads.xiph.org/releases/flac/
+lame:       http://sourceforge.net/projects/lame/files/lame/
+libao:      http://downloads.xiph.org/releases/ao/
+libogg:     http://downloads.xiph.org/releases/ogg/
+libsndfile: http://www.mega-nerd.com/libsndfile/files/
+libvorbis:  http://downloads.xiph.org/releases/vorbis/
+speex:      http://downloads.xiph.org/releases/speex
+
+# video
+libmad:    ftp://ftp.mars.org/pub/mpeg/
+libmng:    http://sourceforge.net/projects/libmng/files/
+libmpeg2:  http://sourceforge.net/projects/libmpeg2/files/
+libtheora: http://downloads.xiph.org/releases/theora
+x264:      ftp://ftp.videolan.org/pub/videolan/x264/snapshots
+
+# image
+jpeg:   http://www.ijg.org/files/
+lcms2:  http://sourceforge.net/projects/lcms/files/
+libpng: http://sourceforge.net/projects/libpng/files/
+libxpm: http://cgit.freedesktop.org/xorg/lib/libXpm
+tiff:   ftp://ftp.remotesensing.org/pub/libtiff
+
+# utility
+libid3tag: ftp://ftp.mars.org/pub/mpeg/
+liboggz:   http://downloads.xiph.org/releases/liboggz
+xspf:      http://downloads.xiph.org/releases/xspf
+
+# general
+madplay:   ftp://ftp.mars.org/pub/mpeg/
+ffmpeg:    http://ffmpeg.org/releases/

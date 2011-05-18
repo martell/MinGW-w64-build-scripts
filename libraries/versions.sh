@@ -36,6 +36,7 @@ export SNDFILE_VERSION="1.0.24"
 export JPEG_VERSION="8c"
 export PNG_VERSION="1.5.2"
 export LCMS2_VERSION="2.1"
+export LIBXPM_VERSION="3.5.9"
 
 # utility
 export OGGZ_VERSION="1.1.1"

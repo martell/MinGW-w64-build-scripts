@@ -19,6 +19,10 @@ export FREETYPE_VERSION="2.4.4"
 # internationalization
 export LIBICONV_VERSION="1.13.1"
 
+# network
+export CURL_VERSION="7.21.6"
+export OPENSSL_VERSION="1.0.0d"
+
 ## SCIENTIFIC
 export GSL_VERSION="1.15"
 export FFTW_VERSION="3.2.2"

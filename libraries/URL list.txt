@@ -17,6 +17,10 @@ freetype: http://sourceforge.net/projects/freetype/files/freetype2/
 # internationalization
 libiconv: http://ftp.gnu.org/gnu/libiconv/
 
+# network
+curl:    http://curl.haxx.se/download.html
+openssl: http//www.openssl.org/source
+
 ## MULTIMEDIA
 # audio
 flac:       http://downloads.xiph.org/releases/flac/

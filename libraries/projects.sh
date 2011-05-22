@@ -5,6 +5,7 @@ set -e
 export PROJECTS="zlib bzip2 gzip xz
                  libiconv
                  ncurses termcap
+                 openssl curl
                  flac lame libao libogg libsndfile libvorbis speex
                  jpeg lcms2 libpng tiff
                  libid3tag liboggz libxspf vorbis-tools

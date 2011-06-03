@@ -12,11 +12,10 @@ export CRT_MULTILIB='--disable-lib64 --enable-lib32'
 # Projects to be built, in the right order
 PROJECTS="expat libiconv
           gmp mpfr mpc ppl cloog
-          mingw-w64-headers
           pthreads
-          binutils
-          gcc-c
+          mingw-w64-headers
           mingw-w64-crt
+          binutils
           gcc
           python
           gdb

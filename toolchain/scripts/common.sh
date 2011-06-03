@@ -2,7 +2,7 @@
 set -e
 
 # options
-export GCC_LANGUAGES="c,c++,fortran,objc,obj-c++,ada" #java,ada
+export GCC_LANGUAGES="c,c++,fortran,objc,obj-c++" #java,ada
 export BUILD_CORES=2 #used as argument for "make -jn"
 export STATIC='--enable-static --disable-shared'
 if [[ $HOST == "x86_64-linux-gnu" ]]

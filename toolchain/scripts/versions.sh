@@ -18,5 +18,5 @@ export CLANG_VERSION="3.1"
 export MINGW_W64_VERSION="trunk" #"stable/v2.x"
 
 # my revision number
-export MY_REVISION=-3
-export MY_CLANG_REVISION=-3
+export MY_REVISION=-2
+export MY_CLANG_REVISION=-2

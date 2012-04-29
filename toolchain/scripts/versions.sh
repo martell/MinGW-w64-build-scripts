@@ -9,7 +9,7 @@ export MPFR_VERSION="3.1.0"
 export MPC_VERSION="0.9"
 export PPL_VERSION="0.12.1"
 export CLOOG_VERSION="0.17.0"
-export BINUTILS_VERSION="2.22"
+export BINUTILS_VERSION="2.22.52"
 export GCC_VERSION="4.7.0"
 export GDB_VERSION="7.4.1"
 export PYTHON_VERSION="2.7.1"
@@ -22,4 +22,4 @@ export MY_REVISION=-release
 export MY_CLANG_REVISION=-release
 
 # set bug url and such
-export GNU_PACKAGE_OPTIONS="--with-pkgversion=rubenvb-$GCC_VERSION --with-bug-url=http://sourceforge.net/tracker/?group_id=202880"
+export GNU_PACKAGE_OPTIONS="--with-pkgversion=rubenvb-$GCC_VERSION --with-bug-url=mingw-w64-public@lists.sourceforge.net"

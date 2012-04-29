@@ -22,8 +22,8 @@ else
 
     if [[ "$TARGET" == "$HOST" ]]
     then
-        $HOST-strip $PREFIX-clang/bin/*.exe || exit 1
-        $HOST-strip $PREFIX-clang/bin/*.dll || exit 1
+        #$HOST-strip $PREFIX-clang/bin/*.exe || exit 1
+        #$HOST-strip $PREFIX-clang/bin/*.dll || exit 1
         echo "---> Copying and stripping DLL's"
         #cp $GCC_LIBS/bin/*.dll $PREFIX/bin
         $HOST-strip $PREFIX/bin/*.dll || exit 1

@@ -5,18 +5,18 @@ set -e
 export BUILD=x86_64-linux-gnu
 export MAKE_OPTS="-j4"
 export HOST_CFLAGS="-O2 -mtune=corei7"
-export HOST_LDFLAGS= #"-flto"
 if [ "$HOST_VENDOR" != "apple" ]
 then
   export HOST_CFLAGS="$HOST_CFLAGS -fomit-frame-pointer -momit-leaf-frame-pointer -fgraphite-identity -floop-interchange -floop-block -floop-parallelize-all"
-  #if [ "$HOST_OS" != "mingw32" ] && [ "$HOST_OS" != "cygwin" ]
+  #if [ "$HOST_OS" != "gnu" ] && [ "$HOST_OS" != "cygwin" ]
   #then
-    # Linux GCC was failing with this
-    export HOST_CFLAGS="$HOST_CFLAGS -flto"
+    # Linux binutils fail to build
+  #  export HOST_CFLAGS="$HOST_CFLAGS -flto"
+  #  export HOST_LDFLAGS="$HOST_LDFLAGS -flto"
   #fi
 fi
 # GCC languages to be built
-export GCC_LANGUAGES='c,lto,c++,objc,obj-c++,fortran,java,ada' #go
+export GCC_LANGUAGES='c,lto,c++,objc,obj-c++,fortran,java' #go,ada
 
 # get version info
 echo "-> Loading version info"

@@ -35,16 +35,16 @@ else
     echo "---> Base package"
     $BIN_COMPRESS $BIN_FILE $SHORT_NAME > $LOG_DIR/zipping.log
 
-    if [ "$HOST" == "x86_64-w64-mingw32" ] || [ "$HOST" == "i686-w64-mingw32" ]
-    then
+    #if [ "$HOST" == "x86_64-w64-mingw32" ] || [ "$HOST" == "i686-w64-mingw32" ]
+    #then
         # Clang addon package
-        echo "---> Clang addon package"
-        mv $PREFIX $PREFIX-base
-        mv $PREFIX-clang $PREFIX
-        $BIN_COMPRESS $BIN_FILE_CLANG $SHORT_NAME > $LOG_DIR/zipping.log
-        mv $PREFIX $PREFIX-clang
-        mv $PREFIX-base $PREFIX
-    fi
+    #    echo "---> Clang addon package"
+    #    mv $PREFIX $PREFIX-base
+    #    mv $PREFIX-clang $PREFIX
+    #    $BIN_COMPRESS $BIN_FILE_CLANG $SHORT_NAME > $LOG_DIR/zipping.log
+    #    mv $PREFIX $PREFIX-clang
+    #    mv $PREFIX-base $PREFIX
+    #fi
 fi
 
 if [ -f $SRC_FILE ]
@@ -53,7 +53,7 @@ then
 else
     echo "--> Zipping sources"
     cd $TOP_DIR
-    tar --lzma -cf $SRC_FILE --exclude='*.git' --exclude='*.svn' src scripts patches *.sh
+    tar --lzma -cf $SRC_FILE --exclude='*.git' --exclude='*.svn' --exclude='LLVM' src scripts patches *.sh
 fi
 
 cd $TOP_DIR

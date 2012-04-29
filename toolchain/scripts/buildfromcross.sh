@@ -27,8 +27,8 @@ then
     POSTGCC_STEPS="expat
                    python
                    gdb
-                   make
-                   llvm-clang"
+                   make"
+#                  llvm-clang"
 fi
 POSTGCC_STEPS="$POSTGCC_STEPS
                cleanup

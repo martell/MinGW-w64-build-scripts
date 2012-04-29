@@ -11,6 +11,7 @@ else
                               --with-libexpat-prefix=$PREREQ_INSTALL \
                               --with-python --enable-plugins \
                               $GNU_WIN32_OPTIONS \
+                              $GNU_PACKAGE_OPTIONS \
                               CFLAGS="$HOST_CFLAGS $GDB_PYTHON_WIN64_WORKAROUND -I$BUILD_DIR/python/include" LDFLAGS="$HOST_LDFLAGS -L$BUILD_DIR/python" \
                               > $LOG_DIR/gdb_configure.log 2>&1 || exit 1
     echo "--> Configured"

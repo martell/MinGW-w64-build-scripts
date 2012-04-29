@@ -10,6 +10,7 @@ else
                                    --disable-multilib \
                                    --with-libiconv-prefix=$PREREQ_INSTALL \
                                    $GNU_WIN32_OPTIONS \
+                                   $GNU_PACKAGE_OPTIONS \
                                    CFLAGS="$HOST_CFLAGS" LDFLAGS="$HOST_LDFLAGS" \
                                    > $LOG_DIR/binutils_configure.log 2>&1 || exit 1
     echo "--> Configured"

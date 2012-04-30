@@ -14,7 +14,7 @@ else
                               --enable-shared --enable-static --enable-threads=win32 \
                               --disable-multilib --enable-plugins \
                               --enable-languages=$GCC_LANGUAGES --enable-libgomp --enable-libstdcxx-debug \
-                              --enable-sjlj-exceptions --enable-fully-dynamic-string \
+                              --enable-dw2-exceptions --disable-sjlj-exceptions --enable-fully-dynamic-string \
                               --disable-nls --disable-werror --enable-checking=release \
                               $GNU_WIN32_OPTIONS \
                               CFLAGS="$HOST_CFLAGS" LDFLAGS="$HOST_LDFLAGS" \

@@ -4,7 +4,7 @@ set -e
 # build options - for my system only
 export BUILD=x86_64-linux-gnu
 export MAKE_OPTS="-j4"
-export HOST_CFLAGS="-O2 -mtune=corei7"
+export HOST_CFLAGS="-O2 -march=nocona -mtune=core2"
 if [ "$HOST_VENDOR" != "apple" ]
 then
   export HOST_CFLAGS="$HOST_CFLAGS -fomit-frame-pointer -momit-leaf-frame-pointer -fgraphite-identity -floop-interchange -floop-block -floop-parallelize-all"

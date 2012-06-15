@@ -6,9 +6,10 @@ then
     echo "--> Already configured"
 else
     echo "--> Configuring"
+    echo `/usr/bin/env python` --version
     sh $SRC_DIR/LLVM/configure --host=$HOST --build=$BUILD --target=$TARGET --with-sysroot=$PREFIX --prefix=$PREFIX-clang \
                                --enable-optimized --disable-assertions --disable-pthreads \
-                               CXX=$HOST-g++ CFLAGS="$HOST_CFLAGS" LDFLAGS="$HOST_LDFLAGS" \
+                               CFLAGS="$HOST_CFLAGS" LDFLAGS="$HOST_LDFLAGS" \
                                > $LOG_DIR/llvm-clang_configure.log 2>&1 || exit 1
     echo "--> Configured"
 fi
